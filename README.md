@@ -9,7 +9,7 @@ A production-ready **Medallion Architecture** data pipeline built on **Databrick
 
 ---
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 This pipeline implements the **Medallion Architecture** pattern:
 
@@ -21,7 +21,7 @@ This pipeline implements the **Medallion Architecture** pattern:
 └─────────────┘     └─────────────┘     └─────────────┘
 ```
 
-### **Bronze Layer** 🥉
+### **Bronze Layer** 
 - **Purpose:** Raw data ingestion with no transformations
 - **Source:** CSV files in Unity Catalog Volumes
 - **Schema:** All columns as strings + audit metadata
@@ -30,7 +30,7 @@ This pipeline implements the **Medallion Architecture** pattern:
   - `_ingested_at`: Timestamp of ingestion
   - `_source_file`: Source filename for lineage
 
-### **Silver Layer** 🥈  
+### **Silver Layer**   
 - **Purpose:** Cleaned, typed, and validated data
 - **Transformations:**
   - Type casting (int, decimal, timestamp, boolean)
@@ -39,7 +39,7 @@ This pipeline implements the **Medallion Architecture** pattern:
   - Referential integrity validation (FK checks)
 - **Tables:** 7 curated tables ready for analytics
 
-### **Gold Layer** 🥇
+### **Gold Layer** 
 - **Purpose:** Business-level aggregates and dimensional models
 - **Schema:** Star schema for BI tools
 - **Tables:**
@@ -50,7 +50,7 @@ This pipeline implements the **Medallion Architecture** pattern:
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 AWS-Lakehouse_Medallion_Pipeline/
@@ -62,7 +62,7 @@ AWS-Lakehouse_Medallion_Pipeline/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -93,13 +93,13 @@ AWS-Lakehouse_Medallion_Pipeline/
    - Place CSV files in: `/Volumes/workspace/bronze/landing/AdventureWorksCSV-main/AdventureWorksCSV-main/`
 
 4. **Run notebooks in order:**
-   - ✅ `01_bronze_ingestion.ipynb`
-   - ✅ `02_silver_transformation.ipynb`
-   - ✅ `03_gold_aggregated.ipynb`
+   -  `01_bronze_ingestion.ipynb`
+   -  `02_silver_transformation.ipynb`
+   -  `03_gold_aggregated.ipynb`
 
 ---
 
-## 📊 Data Model
+##  Data Model
 
 ### Bronze Tables (7)
 - `workspace.bronze.sales_order_header`
@@ -128,18 +128,18 @@ Same structure as Bronze, but with:
 
 ---
 
-## 🔧 Key Features
+##  Key Features
 
-✅ **Idempotent Pipeline** — Can be re-run safely (overwrite mode)  
-✅ **Data Quality Checks** — Duplicate detection on primary keys  
-✅ **Referential Integrity** — FK validation between tables  
-✅ **Audit Trail** — Ingestion timestamps + source file tracking  
-✅ **Geospatial Parsing** — Extracts lat/long from WKT POINT format  
-✅ **Type Safety** — Explicit casting with validation  
+ **Idempotent Pipeline** — Can be re-run safely (overwrite mode)  
+ **Data Quality Checks** — Duplicate detection on primary keys  
+ **Referential Integrity** — FK validation between tables  
+ **Audit Trail** — Ingestion timestamps + source file tracking  
+ **Geospatial Parsing** — Extracts lat/long from WKT POINT format  
+ **Type Safety** — Explicit casting with validation  
 
 ---
 
-## 📈 Sample Queries
+##  Sample Queries
 
 ### Top 5 Customers by Revenue
 ```sql
@@ -170,7 +170,7 @@ ORDER BY d.year, d.month;
 
 ---
 
-## 🛠️ Technologies
+##  Technologies
 
 - **Databricks** — Unified analytics platform
 - **PySpark** — Distributed data processing
@@ -180,26 +180,26 @@ ORDER BY d.year, d.month;
 
 ---
 
-## 📝 License
+##  License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 👤 Author
+##  Author
 
 **Evans Tanui**  
 [GitHub](https://github.com/EvansTanui) | [LinkedIn](https://linkedin.com/in/evanstanui)
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, issues, and feature requests are welcome!  
 Feel free to check the [issues page](https://github.com/EvansTanui/AWS-Lakehouse_Medallion_Pipeline/issues).
 
 ---
 
-## ⭐ Show Your Support
+##  Show Your Support
 
-Give a ⭐️ if this project helped you!
+Give a  if this project helped you!
