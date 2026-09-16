@@ -198,8 +198,5 @@ This project is open source and available under the [MIT License](LICENSE).
 Contributions, issues, and feature requests are welcome!  
 Feel free to check the [issues page](https://github.com/EvansTanui/AWS-Lakehouse_Medallion_Pipeline/issues).
 
----
 
-##  Show Your Support
 
-Give a  if this project helped you!
